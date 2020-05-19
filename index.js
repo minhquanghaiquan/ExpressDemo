@@ -1,11 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser')
-
 var userRoute = require('./routes/user.route');
+var authRoute = require('./routes/auth.route');
 var app = express();
 var port = 3000;
 
+var authMiddleware= require('./middlewares/auth.middleware')
 
 
 
@@ -63,8 +64,8 @@ app.get('/', function(request, response){
 //     db.get('users').push(req.body).write();
 //     res.redirect('/users');
 // })
-app.use('/users', userRoute);
-
+app.use('/users',authMiddleware.requireAuth ,userRoute);
+app.use('/auth', authRoute);
 
 app.listen(port, function(){
 });
