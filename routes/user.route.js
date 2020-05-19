@@ -18,7 +18,10 @@ var controller=require('../controllers/user.controller');
 
 
 router.get('/', controller.index);
-
+router.get('/cookie', function(req,res,next){
+    res.cookie('user-id', 12345);
+    res.send('Hello');
+})
 
 
 router.get('/search', controller.search);
