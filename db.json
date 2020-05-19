@@ -10,6 +10,35 @@
       "id": "OD1aSORLg",
       "email": "minhquang@gmail.com",
       "password": "e10adc3949ba59abbe56e057f20f883e"
+    },
+    {
+      "name": "Quang Tuan",
+      "phone": "0123657",
+      "id": "7rFjkr1Fd"
+    },
+    {
+      "name": "Nguyen Vo Van",
+      "phone": "789565",
+      "id": "D1PjvETKs",
+      "avatar": ""
+    },
+    {
+      "name": "ssss",
+      "phone": "1244",
+      "id": "s_GVMotAW",
+      "avatar": ""
+    },
+    {
+      "name": "dd",
+      "phone": "468877",
+      "id": "6GYtIf8ln",
+      "avatar": "uploads/a1b92fd09e0260d083ea0e954865e3b7"
+    },
+    {
+      "name": "Demo ne",
+      "phone": "134555",
+      "id": "2VFM7ceaJ",
+      "avatar": "uploads/d210507cd6e2cafc37fede3c54e8a85a"
     }
   ]
 }
