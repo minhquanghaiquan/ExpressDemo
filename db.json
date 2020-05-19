@@ -40,5 +40,25 @@
       "id": "2VFM7ceaJ",
       "avatar": "uploads/d210507cd6e2cafc37fede3c54e8a85a"
     }
+  ],
+  "sessions": [],
+  "transfers": [
+    {
+      "id": "SIz9vhEQS",
+      "amount": 5000,
+      "accountId": "123456"
+    },
+    {
+      "id": "CU9o6gqMj",
+      "amount": 20000,
+      "accountId": "12457",
+      "userId": "OD1aSORLg"
+    },
+    {
+      "id": "-5PyBuhBp",
+      "amount": 2334,
+      "accountId": "eeee",
+      "userId": "OD1aSORLg"
+    }
   ]
 }

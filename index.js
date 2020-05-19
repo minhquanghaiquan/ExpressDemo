@@ -2,8 +2,12 @@ require('dotenv').config();
 var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser')
+var csurf = require('csurf');
+
+
 var userRoute = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
+var transferRoute = require('./routes/transfer.route');
 var app = express();
 var port = 3000;
 
@@ -18,8 +22,11 @@ app.use(bodyParser.json())
 var path = require ('path');
 app.set('view engine','pug');
 app.set('views', path.join(__dirname, 'views'));
+
+
 app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(express.static(__dirname + '/public'));
+
 // users = [
 //     {name: 'Quang'},
 //     {name: 'Thinh'},
@@ -67,6 +74,8 @@ app.get('/', function(request, response){
 // })
 app.use('/users',authMiddleware.requireAuth ,userRoute);
 app.use('/auth', authRoute);
+app.use(csurf({cookie: true}));
+app.use('/transfer' , authMiddleware.requireAuth, transferRoute);
 
 app.listen(port, function(){
 });
