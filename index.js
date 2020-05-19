@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser')
@@ -17,7 +18,7 @@ app.use(bodyParser.json())
 var path = require ('path');
 app.set('view engine','pug');
 app.set('views', path.join(__dirname, 'views'));
-app.use(cookieParser('dfghhhh2h232ffd'));
+app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(express.static(__dirname + '/public'));
 // users = [
 //     {name: 'Quang'},
